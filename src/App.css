@@ -20,6 +20,7 @@ body {
 .popup {
   height: 60vh;
   width: 50%;
+  position: absolute;
   background-color: #fbfbfb;
   border-radius: 20px;
   display: flex;
@@ -27,6 +28,7 @@ body {
   align-items: center;
   flex-direction: column;
   transition: all 0.7s ease-in-out;
+  z-index: 10;
 }
 .btn {
   color: #ffece8;
@@ -109,6 +111,7 @@ p {
   height: 0;
   overflow: hidden;
   position: absolute;
+  z-index: 10;
   top: -50%;
   left: -50%;
 }

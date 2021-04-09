@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Comfortaa", cursive;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*:focus {
+  outline: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
+  margin: 0;
+  padding: 0;
+  background-color: #fe7258;
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.popup {
+  height: 60vh;
+  width: 50%;
+  background-color: #fbfbfb;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.7s ease-in-out;
+}
+.btn {
+  width: 20%;
+  height: 10%;
+  min-width: fit-content;
+  color: #ffece8;
+  background-color: #fe7258;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: "Comfortaa", sans-serif;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.ballon {
+  animation: float 5s ease-out infinite;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes float {
+  50% {
+    transform: translate(10px, 40px);
+  }
+}
+.shadow {
+  background-color: #dadada;
+  border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;
+  animation: shrink 5s ease-out infinite;
+  transform-origin: center center;
+}
+@keyframes shrink {
+  0% {
+    width: 30px;
+    height: 10px;
+    background-color: #ffece8;
+  }
+  50% {
+    width: 80px;
+    height: 20px;
+  }
+  100% {
+    width: 30px;
+    height: 10px;
+  }
+}
+.ballAnim {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+p {
+  color: #fe7258;
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.whitebtn {
+  width: 10%;
+  height: 6vh;
+  min-width: fit-content;
+  background-color: #ffece8;
+  color: #fe7258;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: "Comfortaa", sans-serif;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.whitebtn:hover,
+.btn:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1, 1.1);
+}
+
+.whitebtn:active,
+.btn:active {
+  opacity: 0.7;
+  transform: translateX(2px);
+}
+.close {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: -50%;
+  left: -50%;
 }

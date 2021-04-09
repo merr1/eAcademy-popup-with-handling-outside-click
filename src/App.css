@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Comfortaa", cursive;
+  font-family: "Comfortaa", sans-serif;
 }
 *:focus {
   outline: none;
@@ -29,17 +29,27 @@ body {
   transition: all 0.7s ease-in-out;
 }
 .btn {
-  width: 20%;
-  height: 10%;
-  min-width: fit-content;
   color: #ffece8;
   background-color: #fe7258;
+}
+.whitebtn {
+  background-color: #ffece8;
+  color: #fe7258;
+}
+.btn,
+.whitebtn {
+  width: 10vw;
+  height: 6vh;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   font-size: 20px;
   font-family: "Comfortaa", sans-serif;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
+  min-width: fit-content;
 }
 .ballon {
   animation: float 5s ease-out infinite;
@@ -82,31 +92,13 @@ body {
 p {
   color: #fe7258;
   font-size: 20px;
+  text-align: center;
 }
-
-.whitebtn {
-  width: 10%;
-  height: 6vh;
-  min-width: fit-content;
-  background-color: #ffece8;
-  color: #fe7258;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  font-size: 20px;
-  font-family: "Comfortaa", sans-serif;
-  transition: all 0.5s ease-in-out;
-  cursor: pointer;
-}
-
 .whitebtn:hover,
 .btn:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transform: scale(1.1, 1.1);
 }
-
 .whitebtn:active,
 .btn:active {
   opacity: 0.7;

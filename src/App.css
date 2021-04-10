@@ -27,7 +27,6 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  transition: all 0.7s ease-in-out;
   z-index: 10;
 }
 .btn {
@@ -109,9 +108,4 @@ p {
 .close {
   opacity: 0;
   height: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: 10;
-  top: -50%;
-  left: -50%;
 }
